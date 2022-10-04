@@ -68,6 +68,16 @@ class TiempoFragment : Fragment() {
             if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "minutos"){
                 textViewResultado.setText(tiempo.segundosMinutos(editText1.text.toString().toDouble()).toString())
             }
+            if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "horas"){
+                textViewResultado.setText(tiempo.segundosHoras(editText1.text.toString().toDouble()).toString())
+            }
+            if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "días"){
+                textViewResultado.setText(tiempo.segundosDias(editText1.text.toString().toDouble()).toString())
+            }
+            if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "semanas"){
+                textViewResultado.setText(tiempo.segundosSemanas(editText1.text.toString().toDouble()).toString())
+            }
+
 
         }
 
