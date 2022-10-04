@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_tiempo"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Tiempo"/>
+
+    <item
+        android:id="@+id/navigation_longitud"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Longitud"/>
+
+    <item
+        android:id="@+id/navigation_artists"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Artists"/>
+    <item
+        android:id="@+id/navigation_tiempoVivido"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Vivido"/>
+</menu>
