@@ -29,15 +29,43 @@ class Tiempo() {
     //MINUTOS
     fun minutosSegundos(minutos:Double):Double{
         println("Paso de minutos a segungos")
-
         return minutos * 60
     }
+
+    fun minutosHoras(minutos:Double):Double{
+        println("Paso de minutos a Horas")
+        return minutos / 60
+    }
+    fun minutosDias(minutos:Double):Double{
+        println("Paso de minutos a dias")
+        return minutos / 1440
+    }
+
+    fun minutosSemanas(minutos:Double):Double{
+        println("Paso de minutos a semanas")
+        return minutos / 10080
+    }
+
 
     //HORAS
     fun horasSegundos(horas: Double):Double{
         println("Paso de horas a segungos")
-
         return horas * 3600
+    }
+
+    fun horasMinutos(horas: Double):Double{
+        println("Paso de horas a minutos")
+        return horas * 60
+    }
+
+    fun horasDias(horas: Double):Double{
+        println("Paso de horas a dias")
+        return horas / 24
+    }
+
+    fun horasSemanas(horas: Double):Double{
+        println("Paso de horas a semanas")
+        return horas * 168
     }
 
 
