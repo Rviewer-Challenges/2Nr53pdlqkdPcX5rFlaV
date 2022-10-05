@@ -1,22 +1,13 @@
 package com.cys.fragmets
 
-import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.cys.unit_converter.R
 import com.cys.utils.Tiempo
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.core.content.ContextCompat.getSystemService
-
-
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -64,19 +55,8 @@ class TiempoFragment : Fragment() {
 
         buttonConvertir.setOnClickListener {
             println("Convertir!")
+            convertir(spinner1, spinner2, textViewResultado, editText1)
 
-            if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "minutos"){
-                textViewResultado.setText(tiempo.segundosMinutos(editText1.text.toString().toDouble()).toString())
-            }
-            if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "horas"){
-                textViewResultado.setText(tiempo.segundosHoras(editText1.text.toString().toDouble()).toString())
-            }
-            if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "días"){
-                textViewResultado.setText(tiempo.segundosDias(editText1.text.toString().toDouble()).toString())
-            }
-            if(spinner1.selectedItem == "segundos" && spinner2.selectedItem == "semanas"){
-                textViewResultado.setText(tiempo.segundosSemanas(editText1.text.toString().toDouble()).toString())
-            }
 
 
         }
@@ -103,6 +83,55 @@ class TiempoFragment : Fragment() {
 
                 }
             }
+    }
+    fun convertir(
+        spinner1: Spinner,
+        spinner2: Spinner,
+        textViewResultado: TextView,
+        editText1: EditText
+    ){
+        when(spinner1.selectedItem){
+            "segundos" ->{
+                convertirSegundos(spinner2, textViewResultado, editText1)
+
+            }
+            "minutos" ->{
+
+            }
+            "horas" ->{
+
+            }
+            "días" ->{
+
+            }
+            "semanas" ->{
+
+            }
+
+        }
+    }
+
+    fun convertirSegundos(spinner2: Spinner, textView: TextView, editText1:EditText){
+
+        when(spinner2.selectedItem){
+            "segundos"->{
+                textView.setText(editText1.text.toString())
+            }
+            "minutos"->{
+                textView.setText(tiempo.segundosMinutos(editText1.text.toString().toDouble()).toString())
+            }
+            "horas"->{
+                textView.setText(tiempo.segundosHoras(editText1.text.toString().toDouble()).toString())
+            }
+            "días"->{
+                textView.setText(tiempo.segundosDias(editText1.text.toString().toDouble()).toString())
+            }
+            "semanas"->{
+                textView.setText(tiempo.segundosSemanas(editText1.text.toString().toDouble()).toString())
+
+            }
+        }
+
     }
 
 }
