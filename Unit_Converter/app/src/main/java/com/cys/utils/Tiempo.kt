@@ -5,20 +5,19 @@ class Tiempo() {
     //SEGUNDOS
     fun segundosMinutos(segundos:Double):Double{
         println("Paso de segundos a minutos")
-
         return segundos / 60
     }
 
     fun segundosHoras(segundos: Double):Double{
         println("Paso de segundos a horas")
-
         return segundos / 3600
     }
+
     fun segundosDias(segundos: Double):Double{
         println("Paso de segundos a días")
-
         return segundos / 86400
     }
+
     fun segundosSemanas(segundos: Double):Double{
         println("Paso de segundos a semanas")
 
