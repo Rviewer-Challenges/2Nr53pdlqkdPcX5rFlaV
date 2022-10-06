@@ -96,10 +96,10 @@ class TiempoFragment : Fragment() {
 
             }
             "minutos" ->{
-
+                convertirMinutos(spinner2, textViewResultado, editText1)
             }
             "horas" ->{
-
+                convertirHoras(spinner2, textViewResultado, editText1)
             }
             "días" ->{
 
@@ -111,7 +111,49 @@ class TiempoFragment : Fragment() {
         }
     }
 
-    fun convertirSegundos(spinner2: Spinner, textView: TextView, editText1:EditText){
+    private fun convertirHoras(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "segundos"->{
+                textView.setText(tiempo.horasSegundos(editText1.text.toString().toDouble()).toString())
+            }
+            "minutos"->{
+                textView.setText(tiempo.horasMinutos(editText1.text.toString().toDouble()).toString())
+            }
+            "horas"->{
+                textView.setText(editText1.text.toString())
+            }
+            "días"->{
+                textView.setText(tiempo.horasDias(editText1.text.toString().toDouble()).toString())
+            }
+            "semanas"->{
+                textView.setText(tiempo.horasSemanas(editText1.text.toString().toDouble()).toString())
+
+            }
+        }
+    }
+
+    private fun convertirMinutos(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "segundos"->{
+                textView.setText(tiempo.minutosSegundos(editText1.text.toString().toDouble()).toString())
+            }
+            "minutos"->{
+                textView.setText(editText1.text.toString())
+            }
+            "horas"->{
+                textView.setText(tiempo.minutosHoras(editText1.text.toString().toDouble()).toString())
+            }
+            "días"->{
+                textView.setText(tiempo.minutosDias(editText1.text.toString().toDouble()).toString())
+            }
+            "semanas"->{
+                textView.setText(tiempo.minutosSemanas(editText1.text.toString().toDouble()).toString())
+
+            }
+        }
+    }
+
+    private fun convertirSegundos(spinner2: Spinner, textView: TextView, editText1:EditText){
 
         when(spinner2.selectedItem){
             "segundos"->{

@@ -64,7 +64,7 @@ class Tiempo() {
 
     fun horasSemanas(horas: Double):Double{
         println("Paso de horas a semanas")
-        return horas * 168
+        return horas / 168
     }
 
 
