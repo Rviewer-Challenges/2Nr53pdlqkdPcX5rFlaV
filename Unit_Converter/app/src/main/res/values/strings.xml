@@ -9,4 +9,11 @@
         <item>días</item>
         <item>semanas</item>
     </string-array>
+    <string-array name="longitude">
+        <item>mm milimetros</item>
+        <item>cm centrímetros</item>
+        <item>dm decímetros</item>
+        <item>m metros</item>
+        <item>km kilómetros</item>
+    </string-array>
 </resources>
