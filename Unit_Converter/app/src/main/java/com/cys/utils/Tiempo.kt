@@ -72,31 +72,44 @@ class Tiempo() {
     //DIAS
     fun diasSegundos(dias: Double):Double{
         println("Paso de dias a segundos")
-
         return dias * 86400
     }
 
     fun diasMinutos(dias: Double):Double{
         println("Paso de dias a minutos")
-
         return dias * 1440
     }
 
     fun diasHoras(dias: Double):Double{
         println("Paso de dias a horas")
-
         return dias * 24
     }
 
     fun diasSemanas(dias: Double):Double{
         println("Paso de dias a horas")
-
         return dias / 7
     }
 
 
     //SEMANAS
+    fun semanasSegundos(semanas: Double):Double{
+        println("Paso de semanas a segundos")
+        return semanas * 604800
+    }
 
+    fun semanasMinutos(semanas: Double):Double{
+        println("Paso de semanas a minutos")
+        return semanas * 10080
+    }
 
+    fun semanasHoras(semanas: Double):Double{
+        println("Paso de semanas a horas")
+        return semanas * 168
+    }
+
+    fun semanasDias(semanas: Double):Double{
+        println("Paso de semanas a dias")
+        return semanas * 7
+    }
 
 }
