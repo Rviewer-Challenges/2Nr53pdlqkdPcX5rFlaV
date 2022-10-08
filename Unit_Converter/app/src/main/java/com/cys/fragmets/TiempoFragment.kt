@@ -102,12 +102,52 @@ class TiempoFragment : Fragment() {
                 convertirHoras(spinner2, textViewResultado, editText1)
             }
             "días" ->{
-
+                convertirDias(spinner2, textViewResultado, editText1)
             }
             "semanas" ->{
-
+                convertirSemanas(spinner2, textViewResultado, editText1)
             }
 
+        }
+    }
+
+    private fun convertirSemanas(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "segundos"->{
+                textView.setText(tiempo.semanasSegundos(editText1.text.toString().toDouble()).toString())
+            }
+            "minutos"->{
+                textView.setText(tiempo.semanasMinutos(editText1.text.toString().toDouble()).toString())
+            }
+            "horas"->{
+                textView.setText(tiempo.semanasHoras(editText1.text.toString().toDouble()).toString())
+            }
+            "días"->{
+                textView.setText(tiempo.semanasDias(editText1.text.toString().toDouble()).toString())
+            }
+            "semanas"->{
+                textView.setText(editText1.text.toString())
+            }
+        }
+    }
+
+    private fun convertirDias(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "segundos"->{
+                textView.setText(tiempo.diasSegundos(editText1.text.toString().toDouble()).toString())
+            }
+            "minutos"->{
+                textView.setText(tiempo.diasMinutos(editText1.text.toString().toDouble()).toString())
+            }
+            "horas"->{
+                textView.setText(tiempo.diasHoras(editText1.text.toString().toDouble()).toString())
+            }
+            "días"->{
+                textView.setText(editText1.text.toString())
+            }
+            "semanas"->{
+                textView.setText(tiempo.diasSemanas(editText1.text.toString().toDouble()).toString())
+            }
         }
     }
 
@@ -127,7 +167,6 @@ class TiempoFragment : Fragment() {
             }
             "semanas"->{
                 textView.setText(tiempo.horasSemanas(editText1.text.toString().toDouble()).toString())
-
             }
         }
     }
@@ -148,7 +187,6 @@ class TiempoFragment : Fragment() {
             }
             "semanas"->{
                 textView.setText(tiempo.minutosSemanas(editText1.text.toString().toDouble()).toString())
-
             }
         }
     }
@@ -170,7 +208,6 @@ class TiempoFragment : Fragment() {
             }
             "semanas"->{
                 textView.setText(tiempo.segundosSemanas(editText1.text.toString().toDouble()).toString())
-
             }
         }
 
