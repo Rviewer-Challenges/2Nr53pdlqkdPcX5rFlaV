@@ -19,9 +19,10 @@
     <string-array name="datos">
         <item>B Byte</item>
         <item>KB Kilobyte</item>
+        <item>MB Megabyte</item>
         <item>GB Gigabyte</item>
         <item>TB Terabyte</item>
-        <item>PB Petabyte</item>
+
     </string-array>
 
 </resources>
