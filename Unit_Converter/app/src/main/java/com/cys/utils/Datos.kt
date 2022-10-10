@@ -25,7 +25,25 @@ class Datos {
 
 
     //Kilobyte
+    fun kilobyteByte(kilobyte: Double):Double{
+        println("Paso de kilobyte a byte")
+        return kilobyte * 1000
+    }
 
+    fun kilobyteMegabyte(kilobyte: Double):Double{
+        println("Paso de kilobyte a megabyte")
+        return kilobyte / 1000
+    }
+
+    fun kilobyteGigabyte(kilobyte: Double):Double{
+        println("Paso de kilobyte a gigabyte")
+        return kilobyte / 1000000
+    }
+
+    fun kilobyteTerabyte(kilobyte: Double):Double{
+        println("Paso de kilobyte a terabyte")
+        return kilobyte / 1000000000
+    }
 
     //Megabyte
 
