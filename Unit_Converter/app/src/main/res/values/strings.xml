@@ -16,4 +16,12 @@
         <item>m metros</item>
         <item>km kilómetros</item>
     </string-array>
+    <string-array name="datos">
+        <item>B Byte</item>
+        <item>KB Kilobyte</item>
+        <item>GB Gigabyte</item>
+        <item>TB Terabyte</item>
+        <item>PB Petabyte</item>
+    </string-array>
+
 </resources>

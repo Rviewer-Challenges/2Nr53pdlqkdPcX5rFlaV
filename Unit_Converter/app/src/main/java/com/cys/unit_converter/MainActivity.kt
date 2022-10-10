@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.cys.fragmets.DatosFragment
 import com.cys.fragmets.LongitudFragment
 import com.cys.fragmets.TiempoFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -42,6 +43,9 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_artists -> {
+                    val fragment = DatosFragment.newInstance()
+                    openFragment(fragment)
+                    Toast.makeText(baseContext, "Datos", Toast.LENGTH_LONG).show()
                     true
                 }
                 R.id.navigation_tiempoVivido -> {
