@@ -68,6 +68,25 @@ class Datos {
     }
 
     //Gigabyte
+    fun gigabyteByte(gigabyte: Double):Double{
+        println("Paso de gigabyte a byte")
+        return gigabyte * 1000000000
+    }
+
+    fun gigabyteKilobyte(gigabyte: Double):Double{
+        println("Paso de gigabyte a kilobyte")
+        return gigabyte * 1000000
+    }
+
+    fun gigabyteMegabyte(gigabyte: Double):Double{
+        println("Paso de gigabyte a megabyte")
+        return gigabyte * 1000
+    }
+
+    fun gigabyteTerabyte(gigabyte: Double):Double{
+        println("Paso de gigabyte a terabyte")
+        return gigabyte / 1000
+    }
 
 
     //Terabyte
