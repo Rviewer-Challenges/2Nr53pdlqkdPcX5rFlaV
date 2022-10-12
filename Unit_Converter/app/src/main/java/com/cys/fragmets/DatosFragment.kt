@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.cys.unit_converter.R
+import com.cys.utils.Datos
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,7 +20,7 @@ import com.cys.unit_converter.R
  */
 class DatosFragment : Fragment() {
     // TODO: Rename and change types of parameters
-
+    val datos = Datos()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +46,10 @@ class DatosFragment : Fragment() {
         spinner1!!.setAdapter(adapterSpinner)
         spinner2!!.setAdapter(adapterSpinner)
 
+        buttonConvertir.setOnClickListener {
+            println("Convertir!")
+            convertir(spinner1, spinner2, textViewResultado, editText1)
+        }
 
         return view
     }
@@ -64,5 +69,130 @@ class DatosFragment : Fragment() {
 
                 }
             }
+    }
+    fun convertir(
+        spinner1: Spinner,
+        spinner2: Spinner,
+        textViewResultado: TextView,
+        editText1: EditText
+    ){
+        when(spinner1.selectedItem){
+            "mm milimetros" ->{
+                convertirBytes(spinner2, textViewResultado, editText1)
+            }
+            "cm centrímetros" ->{
+                convertirKilobytes(spinner2, textViewResultado, editText1)
+            }
+            "dm decímetros" ->{
+                convertirMegabytes(spinner2, textViewResultado, editText1)
+            }
+            "m metros" ->{
+                convertirGigabytes(spinner2, textViewResultado, editText1)
+            }
+            "km kilómetros" ->{
+                convertirTerabytes(spinner2, textViewResultado, editText1)
+            }
+
+        }
+    }
+
+    private fun convertirTerabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "B Byte"->{
+                textView.setText(datos.terabyteByte(editText1.text.toString().toDouble()).toString())
+            }
+            "KB Kilobyte"->{
+                textView.setText(datos.terabyteKilobyte(editText1.text.toString().toDouble()).toString())
+            }
+            "MB Megabyte"->{
+                textView.setText(datos.terabyteMegabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "GB Gigabyte"->{
+                textView.setText(datos.terabyteGigabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "TB Terabyte"->{
+                textView.setText(editText1.text.toString())
+            }
+        }
+    }
+
+    private fun convertirGigabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "B Byte"->{
+                textView.setText(datos.gigabyteByte(editText1.text.toString().toDouble()).toString())
+            }
+            "KB Kilobyte"->{
+                textView.setText(datos.gigabyteKilobyte(editText1.text.toString().toDouble()).toString())
+            }
+            "MB Megabyte"->{
+                textView.setText(datos.gigabyteMegabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "GB Gigabyte"->{
+                textView.setText(editText1.text.toString())
+            }
+            "TB Terabyte"->{
+                textView.setText(datos.gigabyteTerabyte(editText1.text.toString().toDouble()).toString())
+            }
+        }
+    }
+
+    private fun convertirMegabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "B Byte"->{
+                textView.setText(datos.megabyteByte(editText1.text.toString().toDouble()).toString())
+            }
+            "KB Kilobyte"->{
+                textView.setText(datos.megabyteKilobyte(editText1.text.toString().toDouble()).toString())
+            }
+            "MB Megabyte"->{
+                textView.setText(editText1.text.toString())
+            }
+            "GB Gigabyte"->{
+                textView.setText(datos.megabyteGigabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "TB Terabyte"->{
+                textView.setText(datos.megabyteTerabyte(editText1.text.toString().toDouble()).toString())
+            }
+        }
+    }
+
+    private fun convertirKilobytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "B Byte"->{
+                textView.setText(datos.kilobyteByte(editText1.text.toString().toDouble()).toString())
+            }
+            "KB Kilobyte"->{
+                textView.setText(editText1.text.toString())
+            }
+            "MB Megabyte"->{
+                textView.setText(datos.kilobyteMegabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "GB Gigabyte"->{
+                textView.setText(datos.kilobyteGigabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "TB Terabyte"->{
+                textView.setText(datos.kilobyteTerabyte(editText1.text.toString().toDouble()).toString())
+            }
+        }
+    }
+
+    private fun convertirBytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
+        when(spinner2.selectedItem){
+            "B Byte"->{
+                textView.setText(editText1.text.toString())
+            }
+            "KB Kilobyte"->{
+                textView.setText(datos.byteKilobyte(editText1.text.toString().toDouble()).toString())
+            }
+            "MB Megabyte"->{
+                textView.setText(datos.byteMegabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "GB Gigabyte"->{
+                textView.setText(datos.byteGigabyte(editText1.text.toString().toDouble()).toString())
+            }
+            "TB Terabyte"->{
+                textView.setText(datos.byteTerabyte(editText1.text.toString().toDouble()).toString())
+            }
+        }
     }
 }
