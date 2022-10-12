@@ -16,7 +16,7 @@
         android:icon="@drawable/ic_launcher_background"
         android:title="Datos"/>
     <item
-        android:id="@+id/navigation_tiempoVivido"
+        android:id="@+id/navigation_edad"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Edad Marte"/>
+        android:title="Edad en planetas"/>
 </menu>

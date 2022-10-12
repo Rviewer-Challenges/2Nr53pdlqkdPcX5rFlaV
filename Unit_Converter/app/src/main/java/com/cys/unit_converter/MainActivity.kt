@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cys.fragmets.DatosFragment
+import com.cys.fragmets.EdadFragment
 import com.cys.fragmets.LongitudFragment
 import com.cys.fragmets.TiempoFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -48,7 +49,11 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(baseContext, "Datos", Toast.LENGTH_LONG).show()
                     true
                 }
-                R.id.navigation_tiempoVivido -> {
+                R.id.navigation_edad -> {
+                    val fragment = EdadFragment.newInstance()
+                    openFragment(fragment)
+                    Toast.makeText(baseContext, "Edad", Toast.LENGTH_LONG).show()
+
                     true
                 }
                 else -> false

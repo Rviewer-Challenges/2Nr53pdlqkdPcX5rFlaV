@@ -77,19 +77,19 @@ class DatosFragment : Fragment() {
         editText1: EditText
     ){
         when(spinner1.selectedItem){
-            "mm milimetros" ->{
+            "B Byte" ->{
                 convertirBytes(spinner2, textViewResultado, editText1)
             }
-            "cm centrímetros" ->{
+            "KB Kilobyte" ->{
                 convertirKilobytes(spinner2, textViewResultado, editText1)
             }
-            "dm decímetros" ->{
+            "GB Gigabyte" ->{
                 convertirMegabytes(spinner2, textViewResultado, editText1)
             }
             "m metros" ->{
                 convertirGigabytes(spinner2, textViewResultado, editText1)
             }
-            "km kilómetros" ->{
+            "TB Terabyte" ->{
                 convertirTerabytes(spinner2, textViewResultado, editText1)
             }
 
