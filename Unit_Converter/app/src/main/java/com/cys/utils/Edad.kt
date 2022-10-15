@@ -37,7 +37,34 @@ class Edad() {
 
 
     //VENUS
+    fun edadVenusTierra(edadVenus: Int):Int{
+        println("Edad Venus Tierra")
+        return ((edadVenus * 225) / 365).toInt()
+    }
 
+    fun edadVenusMarte(edadVenus: Int):Int{
+        println("Edad Venus Marte")
+        return ((edadVenus * 225) / 687).toInt()
+    }
+
+    fun edadVenusMercurio(edadVenus: Int):Int{
+        println("Edad Venus Mercurio")
+        return ((edadVenus * 225) / 88).toInt()
+    }
 
     //MERCIRIO
+    fun edadMercurioTierra(edadMercurio: Int):Int{
+        println("Edad Mercurio Tierra")
+        return ((edadMercurio * 88) / 365).toInt()
+    }
+
+    fun edadMercurioMarte(edadMercurio: Int):Int{
+        println("Edad Mercurio Marte")
+        return ((edadMercurio * 88) / 687).toInt()
+    }
+
+    fun edadMercurioVenus(edadMercurio: Int):Int{
+        println("Edad Mercurio Venus")
+        return ((edadMercurio * 88) / 225).toInt()
+    }
 }
