@@ -53,6 +53,7 @@ class TiempoFragment : Fragment() {
         spinner1!!.setAdapter(adapterSpinner)
         spinner2!!.setAdapter(adapterSpinner)
 
+
         buttonConvertir.setOnClickListener {
             println("Convertir!")
             convertir(spinner1, spinner2, textViewResultado, editText1)
