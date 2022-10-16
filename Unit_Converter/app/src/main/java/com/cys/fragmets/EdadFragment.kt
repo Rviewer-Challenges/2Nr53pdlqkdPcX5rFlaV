@@ -48,8 +48,14 @@ class EdadFragment : Fragment() {
         spinner2!!.setAdapter(adapterSpinner)
 
         buttonConvertir.setOnClickListener {
-            println("Convertir!")
-            convertir(spinner1, spinner2, textViewResultado, editText1)
+            if (editText1.text.isNotEmpty()){
+                println("Convertir!")
+                convertir(spinner1, spinner2, textViewResultado, editText1)
+            }else{
+                Toast.makeText(context, "Introduzca un valor mayor a 0", Toast.LENGTH_LONG)
+                println("Menor a 0")
+                textViewResultado.setText("0")
+            }
         }
 
         return view
