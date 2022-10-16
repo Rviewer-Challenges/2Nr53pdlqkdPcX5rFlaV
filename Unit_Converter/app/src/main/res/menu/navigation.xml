@@ -3,20 +3,20 @@
 
     <item
         android:id="@+id/navigation_tiempo"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/reloj"
         android:title="Tiempo"/>
 
     <item
         android:id="@+id/navigation_longitud"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/longitud"
         android:title="Longitud"/>
 
     <item
         android:id="@+id/navigation_artists"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/bytes"
         android:title="Datos"/>
     <item
         android:id="@+id/navigation_edad"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Edad en planetas"/>
+        android:icon="@drawable/edad"
+        android:title="Edad planetas"/>
 </menu>
