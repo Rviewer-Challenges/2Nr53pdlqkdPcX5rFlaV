@@ -3,25 +3,25 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="time">
-        <item>segundos</item>
-        <item>minutos</item>
-        <item>horas</item>
-        <item>días</item>
-        <item>semanas</item>
+        <item>Segundos</item>
+        <item>Minutos</item>
+        <item>Horas</item>
+        <item>Días</item>
+        <item>Semanas</item>
     </string-array>
     <string-array name="longitude">
-        <item>mm milimetros</item>
-        <item>cm centrímetros</item>
-        <item>dm decímetros</item>
-        <item>m metros</item>
-        <item>km kilómetros</item>
+        <item>Milimetros</item>
+        <item>Centrímetros</item>
+        <item>Decímetros</item>
+        <item>Metros</item>
+        <item>Kilómetros</item>
     </string-array>
     <string-array name="datos">
-        <item>B Byte</item>
-        <item>KB Kilobyte</item>
-        <item>MB Megabyte</item>
-        <item>GB Gigabyte</item>
-        <item>TB Terabyte</item>
+        <item>Byte</item>
+        <item>Kilobyte</item>
+        <item>Megabyte</item>
+        <item>Gigabyte</item>
+        <item>Terabyte</item>
     </string-array>
     <string-array name="planetas">
         <item>Tierra</item>

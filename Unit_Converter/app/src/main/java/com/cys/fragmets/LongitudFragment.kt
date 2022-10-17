@@ -88,19 +88,19 @@ class LongitudFragment : Fragment() {
         editText1: EditText
     ){
         when(spinner1.selectedItem){
-            "mm milimetros" ->{
+            "Milimetros" ->{
                 convertirMilimetros(spinner2, textViewResultado, editText1)
             }
-            "cm centrímetros" ->{
+            "Centrímetros" ->{
                 convertirCentimetros(spinner2, textViewResultado, editText1)
             }
-            "dm decímetros" ->{
+            "Decímetros" ->{
                 convertirDecimetros(spinner2, textViewResultado, editText1)
             }
-            "m metros" ->{
+            "Metros" ->{
                 convertirMetros(spinner2, textViewResultado, editText1)
             }
-            "km kilómetros" ->{
+            "Kilómetros" ->{
                 convertirKilometros(spinner2, textViewResultado, editText1)
             }
 
@@ -109,19 +109,19 @@ class LongitudFragment : Fragment() {
 
     private fun convertirKilometros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "mm milimetros"->{
+            "Milimetros"->{
                 textView.setText(longitud.kilometrosMilimetros(editText1.text.toString().toDouble()).toString())
             }
-            "cm centrímetros"->{
+            "Centrímetros"->{
                 textView.setText(longitud.kilometrosCentimetros(editText1.text.toString().toDouble()).toString())
             }
-            "dm decímetros"->{
+            "Decímetros"->{
                 textView.setText(longitud.kilometrosDecimetros(editText1.text.toString().toDouble()).toString())
             }
-            "m metros"->{
+            "Metros"->{
                 textView.setText(longitud.kilometrosMetros(editText1.text.toString().toDouble()).toString())
             }
-            "km kilómetros"->{
+            "Kilómetros"->{
                 textView.setText(editText1.text.toString())
             }
         }
@@ -129,19 +129,19 @@ class LongitudFragment : Fragment() {
 
     private fun convertirMetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "mm milimetros"->{
+            "Milimetros"->{
                 textView.setText(longitud.metrosMilimetros(editText1.text.toString().toDouble()).toString())
             }
-            "cm centrímetros"->{
+            "Centrímetros"->{
                 textView.setText(longitud.metrosCentimetros(editText1.text.toString().toDouble()).toString())
             }
-            "dm decímetros"->{
+            "Decímetros"->{
                 textView.setText(longitud.metrosDecimetros(editText1.text.toString().toDouble()).toString())
             }
-            "m metros"->{
+            "Metros"->{
                 textView.setText(editText1.text.toString())
             }
-            "km kilómetros"->{
+            "Kilómetros"->{
                 textView.setText(longitud.metrosKilometros(editText1.text.toString().toDouble()).toString())
             }
         }
@@ -149,19 +149,19 @@ class LongitudFragment : Fragment() {
 
     private fun convertirCentimetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "mm milimetros"->{
+            "Milimetros"->{
                 textView.setText(longitud.centimetrosMilimetros(editText1.text.toString().toDouble()).toString())
             }
-            "cm centrímetros"->{
+            "Centrímetros"->{
                 textView.setText(editText1.text.toString())
             }
-            "dm decímetros"->{
+            "Decímetros"->{
                 textView.setText(longitud.centimetrosDecimetros(editText1.text.toString().toDouble()).toString())
             }
-            "m metros"->{
+            "Metros"->{
                 textView.setText(longitud.centimetrosMetros(editText1.text.toString().toDouble()).toString())
             }
-            "km kilómetros"->{
+            "Kilómetros"->{
                 textView.setText(longitud.centimetrosKilometros(editText1.text.toString().toDouble()).toString())
             }
         }
@@ -169,19 +169,19 @@ class LongitudFragment : Fragment() {
 
     private fun convertirDecimetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "mm milimetros"->{
+            "Milimetros"->{
                 textView.setText(longitud.decimetrosMilimetros(editText1.text.toString().toDouble()).toString())
             }
-            "cm centrímetros"->{
+            "Centrímetros"->{
                 textView.setText(longitud.decimetrosCentimetros(editText1.text.toString().toDouble()).toString())
             }
-            "dm decímetros"->{
+            "Decímetros"->{
                 textView.setText(editText1.text.toString())
             }
-            "m metros"->{
+            "Metros"->{
                 textView.setText(longitud.decimetrosMetros(editText1.text.toString().toDouble()).toString())
             }
-            "km kilómetros"->{
+            "Kilómetros"->{
                 textView.setText(longitud.decimetrosKilometros(editText1.text.toString().toDouble()).toString())
             }
         }
@@ -190,19 +190,19 @@ class LongitudFragment : Fragment() {
     private fun convertirMilimetros(spinner2: Spinner, textView: TextView, editText1:EditText){
 
         when(spinner2.selectedItem){
-            "mm milimetros"->{
+            "Milimetros"->{
                 textView.setText(editText1.text.toString())
             }
-            "cm centrímetros"->{
+            "Centrímetros"->{
                 textView.setText(longitud.milimetrosCentimetros(editText1.text.toString().toDouble()).toString())
             }
-            "dm decímetros"->{
+            "Decímetros"->{
                 textView.setText(longitud.milimetrosDecimetros(editText1.text.toString().toDouble()).toString())
             }
-            "m metros"->{
+            "Metros"->{
                 textView.setText(longitud.milimetrosMetros(editText1.text.toString().toDouble()).toString())
             }
-            "km kilómetros"->{
+            "Kilómetros"->{
                 textView.setText(longitud.milimetrosKilometros(editText1.text.toString().toDouble()).toString())
             }
         }

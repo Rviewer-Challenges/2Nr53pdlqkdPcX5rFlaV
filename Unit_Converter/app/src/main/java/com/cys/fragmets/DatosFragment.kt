@@ -83,19 +83,19 @@ class DatosFragment : Fragment() {
         editText1: EditText
     ){
         when(spinner1.selectedItem){
-            "B Byte" ->{
+            "Byte" ->{
                 convertirBytes(spinner2, textViewResultado, editText1)
             }
-            "KB Kilobyte" ->{
+            "Kilobyte" ->{
                 convertirKilobytes(spinner2, textViewResultado, editText1)
             }
-            "GB Gigabyte" ->{
+            "Megabyte" ->{
                 convertirMegabytes(spinner2, textViewResultado, editText1)
             }
-            "m metros" ->{
+            "Gigabyte" ->{
                 convertirGigabytes(spinner2, textViewResultado, editText1)
             }
-            "TB Terabyte" ->{
+            "Terabyte" ->{
                 convertirTerabytes(spinner2, textViewResultado, editText1)
             }
 
@@ -104,19 +104,19 @@ class DatosFragment : Fragment() {
 
     private fun convertirTerabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "B Byte"->{
+            "Byte"->{
                 textView.setText(datos.terabyteByte(editText1.text.toString().toDouble()).toString())
             }
-            "KB Kilobyte"->{
+            "Kilobyte"->{
                 textView.setText(datos.terabyteKilobyte(editText1.text.toString().toDouble()).toString())
             }
-            "MB Megabyte"->{
+            "Megabyte"->{
                 textView.setText(datos.terabyteMegabyte(editText1.text.toString().toDouble()).toString())
             }
-            "GB Gigabyte"->{
+            "Gigabyte"->{
                 textView.setText(datos.terabyteGigabyte(editText1.text.toString().toDouble()).toString())
             }
-            "TB Terabyte"->{
+            "Terabyte"->{
                 textView.setText(editText1.text.toString())
             }
         }
@@ -124,19 +124,19 @@ class DatosFragment : Fragment() {
 
     private fun convertirGigabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "B Byte"->{
+            "Byte"->{
                 textView.setText(datos.gigabyteByte(editText1.text.toString().toDouble()).toString())
             }
-            "KB Kilobyte"->{
+            "Kilobyte"->{
                 textView.setText(datos.gigabyteKilobyte(editText1.text.toString().toDouble()).toString())
             }
-            "MB Megabyte"->{
+            "Megabyte"->{
                 textView.setText(datos.gigabyteMegabyte(editText1.text.toString().toDouble()).toString())
             }
-            "GB Gigabyte"->{
+            "Gigabyte"->{
                 textView.setText(editText1.text.toString())
             }
-            "TB Terabyte"->{
+            "Terabyte"->{
                 textView.setText(datos.gigabyteTerabyte(editText1.text.toString().toDouble()).toString())
             }
         }
@@ -144,19 +144,19 @@ class DatosFragment : Fragment() {
 
     private fun convertirMegabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "B Byte"->{
+            "Byte"->{
                 textView.setText(datos.megabyteByte(editText1.text.toString().toDouble()).toString())
             }
-            "KB Kilobyte"->{
+            "Kilobyte"->{
                 textView.setText(datos.megabyteKilobyte(editText1.text.toString().toDouble()).toString())
             }
-            "MB Megabyte"->{
+            "Megabyte"->{
                 textView.setText(editText1.text.toString())
             }
-            "GB Gigabyte"->{
+            "Gigabyte"->{
                 textView.setText(datos.megabyteGigabyte(editText1.text.toString().toDouble()).toString())
             }
-            "TB Terabyte"->{
+            "Terabyte"->{
                 textView.setText(datos.megabyteTerabyte(editText1.text.toString().toDouble()).toString())
             }
         }
@@ -164,19 +164,19 @@ class DatosFragment : Fragment() {
 
     private fun convertirKilobytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "B Byte"->{
+            "Byte"->{
                 textView.setText(datos.kilobyteByte(editText1.text.toString().toDouble()).toString())
             }
-            "KB Kilobyte"->{
+            "Kilobyte"->{
                 textView.setText(editText1.text.toString())
             }
-            "MB Megabyte"->{
+            "Megabyte"->{
                 textView.setText(datos.kilobyteMegabyte(editText1.text.toString().toDouble()).toString())
             }
-            "GB Gigabyte"->{
+            "Gigabyte"->{
                 textView.setText(datos.kilobyteGigabyte(editText1.text.toString().toDouble()).toString())
             }
-            "TB Terabyte"->{
+            "Terabyte"->{
                 textView.setText(datos.kilobyteTerabyte(editText1.text.toString().toDouble()).toString())
             }
         }
@@ -184,19 +184,19 @@ class DatosFragment : Fragment() {
 
     private fun convertirBytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
-            "B Byte"->{
+            "Byte"->{
                 textView.setText(editText1.text.toString())
             }
-            "KB Kilobyte"->{
+            "Kilobyte"->{
                 textView.setText(datos.byteKilobyte(editText1.text.toString().toDouble()).toString())
             }
-            "MB Megabyte"->{
+            "Megabyte"->{
                 textView.setText(datos.byteMegabyte(editText1.text.toString().toDouble()).toString())
             }
-            "GB Gigabyte"->{
+            "Gigabyte"->{
                 textView.setText(datos.byteGigabyte(editText1.text.toString().toDouble()).toString())
             }
-            "TB Terabyte"->{
+            "Terabyte"->{
                 textView.setText(datos.byteTerabyte(editText1.text.toString().toDouble()).toString())
             }
         }
