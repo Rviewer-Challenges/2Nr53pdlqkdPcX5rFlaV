@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.*
 import com.cys.unit_converter.R
 import com.cys.utils.Tiempo
+import com.cys.utils.Utils
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +23,7 @@ import com.cys.utils.Tiempo
 class TiempoFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var tiempo = Tiempo()
+    val utils = Utils()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -119,16 +121,16 @@ class TiempoFragment : Fragment() {
     private fun convertirSemanas(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
-                textView.setText(tiempo.semanasSegundos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.semanasSegundos(editText1.text.toString().toDouble())).toString())
             }
             "Minutos"->{
-                textView.setText(tiempo.semanasMinutos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.semanasMinutos(editText1.text.toString().toDouble())).toString())
             }
             "Horas"->{
-                textView.setText(tiempo.semanasHoras(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.semanasHoras(editText1.text.toString().toDouble())).toString())
             }
             "Días"->{
-                textView.setText(tiempo.semanasDias(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.semanasDias(editText1.text.toString().toDouble())).toString())
             }
             "Semanas"->{
                 textView.setText(editText1.text.toString())
@@ -139,19 +141,19 @@ class TiempoFragment : Fragment() {
     private fun convertirDias(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
-                textView.setText(tiempo.diasSegundos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.diasSegundos(editText1.text.toString().toDouble())).toString())
             }
             "Minutos"->{
-                textView.setText(tiempo.diasMinutos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.diasMinutos(editText1.text.toString().toDouble())).toString())
             }
             "Horas"->{
-                textView.setText(tiempo.diasHoras(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.diasHoras(editText1.text.toString().toDouble())).toString())
             }
             "Días"->{
                 textView.setText(editText1.text.toString())
             }
             "Semanas"->{
-                textView.setText(tiempo.diasSemanas(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.diasSemanas(editText1.text.toString().toDouble())).toString())
             }
         }
     }
@@ -159,19 +161,19 @@ class TiempoFragment : Fragment() {
     private fun convertirHoras(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
-                textView.setText(tiempo.horasSegundos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.horasSegundos(editText1.text.toString().toDouble())).toString())
             }
             "Minutos"->{
-                textView.setText(tiempo.horasMinutos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.horasMinutos(editText1.text.toString().toDouble())).toString())
             }
             "Horas"->{
                 textView.setText(editText1.text.toString())
             }
             "Días"->{
-                textView.setText(tiempo.horasDias(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.horasDias(editText1.text.toString().toDouble())).toString())
             }
             "Semanas"->{
-                textView.setText(tiempo.horasSemanas(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.horasSemanas(editText1.text.toString().toDouble())).toString())
             }
         }
     }
@@ -179,19 +181,19 @@ class TiempoFragment : Fragment() {
     private fun convertirMinutos(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
-                textView.setText(tiempo.minutosSegundos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.minutosSegundos(editText1.text.toString().toDouble())).toString())
             }
             "Minutos"->{
                 textView.setText(editText1.text.toString())
             }
             "Horas"->{
-                textView.setText(tiempo.minutosHoras(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.minutosHoras(editText1.text.toString().toDouble())).toString())
             }
             "Días"->{
-                textView.setText(tiempo.minutosDias(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.minutosDias(editText1.text.toString().toDouble())).toString())
             }
             "Semanas"->{
-                textView.setText(tiempo.minutosSemanas(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.minutosSemanas(editText1.text.toString().toDouble())).toString())
             }
         }
     }
@@ -203,16 +205,16 @@ class TiempoFragment : Fragment() {
                 textView.setText(editText1.text.toString())
             }
             "Minutos"->{
-                textView.setText(tiempo.segundosMinutos(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.segundosMinutos(editText1.text.toString().toDouble())).toString())
             }
             "Horas"->{
-                textView.setText(tiempo.segundosHoras(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.segundosHoras(editText1.text.toString().toDouble())).toString())
             }
             "Días"->{
-                textView.setText(tiempo.segundosDias(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.segundosDias(editText1.text.toString().toDouble())).toString())
             }
             "Semanas"->{
-                textView.setText(tiempo.segundosSemanas(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(tiempo.segundosSemanas(editText1.text.toString().toDouble())).toString())
             }
         }
 

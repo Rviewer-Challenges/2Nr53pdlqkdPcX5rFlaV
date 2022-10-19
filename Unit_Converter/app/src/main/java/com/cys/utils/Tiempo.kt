@@ -2,6 +2,7 @@ package com.cys.utils
 
 class Tiempo() {
 
+
     //SEGUNDOS
     fun segundosMinutos(segundos:Double):Double{
         println("Paso de segundos a minutos")
@@ -14,7 +15,7 @@ class Tiempo() {
     }
 
     fun segundosDias(segundos: Double):Double{
-        println("Paso de segundos a días")
+        println("Paso de segundos a días ")
         return segundos / 86400
     }
 
@@ -66,8 +67,6 @@ class Tiempo() {
         println("Paso de horas a semanas")
         return horas / 168
     }
-
-
 
     //DIAS
     fun diasSegundos(dias: Double):Double{

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.*
 import com.cys.unit_converter.R
 import com.cys.utils.Longitud
+import com.cys.utils.Utils
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,7 +22,7 @@ import com.cys.utils.Longitud
 class LongitudFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private val longitud:Longitud = Longitud()
-
+    private val utils = Utils()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -110,16 +111,16 @@ class LongitudFragment : Fragment() {
     private fun convertirKilometros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
-                textView.setText(longitud.kilometrosMilimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.kilometrosMilimetros(editText1.text.toString().toDouble())))
             }
             "Centrímetros"->{
-                textView.setText(longitud.kilometrosCentimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.kilometrosCentimetros(editText1.text.toString().toDouble())))
             }
             "Decímetros"->{
-                textView.setText(longitud.kilometrosDecimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.kilometrosDecimetros(editText1.text.toString().toDouble())))
             }
             "Metros"->{
-                textView.setText(longitud.kilometrosMetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.kilometrosMetros(editText1.text.toString().toDouble())))
             }
             "Kilómetros"->{
                 textView.setText(editText1.text.toString())
@@ -130,19 +131,19 @@ class LongitudFragment : Fragment() {
     private fun convertirMetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
-                textView.setText(longitud.metrosMilimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.metrosMilimetros(editText1.text.toString().toDouble())))
             }
             "Centrímetros"->{
-                textView.setText(longitud.metrosCentimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.metrosCentimetros(editText1.text.toString().toDouble())))
             }
             "Decímetros"->{
-                textView.setText(longitud.metrosDecimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.metrosDecimetros(editText1.text.toString().toDouble())))
             }
             "Metros"->{
                 textView.setText(editText1.text.toString())
             }
             "Kilómetros"->{
-                textView.setText(longitud.metrosKilometros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.metrosKilometros(editText1.text.toString().toDouble())))
             }
         }
     }
@@ -150,19 +151,19 @@ class LongitudFragment : Fragment() {
     private fun convertirCentimetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
-                textView.setText(longitud.centimetrosMilimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.centimetrosMilimetros(editText1.text.toString().toDouble())))
             }
             "Centrímetros"->{
                 textView.setText(editText1.text.toString())
             }
             "Decímetros"->{
-                textView.setText(longitud.centimetrosDecimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.centimetrosDecimetros(editText1.text.toString().toDouble())))
             }
             "Metros"->{
-                textView.setText(longitud.centimetrosMetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.centimetrosMetros(editText1.text.toString().toDouble())))
             }
             "Kilómetros"->{
-                textView.setText(longitud.centimetrosKilometros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.centimetrosKilometros(editText1.text.toString().toDouble())))
             }
         }
     }
@@ -170,19 +171,19 @@ class LongitudFragment : Fragment() {
     private fun convertirDecimetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
-                textView.setText(longitud.decimetrosMilimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.decimetrosMilimetros(editText1.text.toString().toDouble())))
             }
             "Centrímetros"->{
-                textView.setText(longitud.decimetrosCentimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.decimetrosCentimetros(editText1.text.toString().toDouble())))
             }
             "Decímetros"->{
                 textView.setText(editText1.text.toString())
             }
             "Metros"->{
-                textView.setText(longitud.decimetrosMetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.decimetrosMetros(editText1.text.toString().toDouble())))
             }
             "Kilómetros"->{
-                textView.setText(longitud.decimetrosKilometros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.decimetrosKilometros(editText1.text.toString().toDouble())))
             }
         }
     }
@@ -194,16 +195,16 @@ class LongitudFragment : Fragment() {
                 textView.setText(editText1.text.toString())
             }
             "Centrímetros"->{
-                textView.setText(longitud.milimetrosCentimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.milimetrosCentimetros(editText1.text.toString().toDouble())))
             }
             "Decímetros"->{
-                textView.setText(longitud.milimetrosDecimetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.milimetrosDecimetros(editText1.text.toString().toDouble())))
             }
             "Metros"->{
-                textView.setText(longitud.milimetrosMetros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.milimetrosMetros(editText1.text.toString().toDouble())))
             }
             "Kilómetros"->{
-                textView.setText(longitud.milimetrosKilometros(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(longitud.milimetrosKilometros(editText1.text.toString().toDouble())))
             }
         }
 

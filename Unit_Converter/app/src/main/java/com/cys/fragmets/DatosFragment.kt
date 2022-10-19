@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.*
 import com.cys.unit_converter.R
 import com.cys.utils.Datos
+import com.cys.utils.Utils
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,7 +21,8 @@ import com.cys.utils.Datos
  */
 class DatosFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    val datos = Datos()
+    private val datos = Datos()
+    private val utils = Utils()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,16 +107,16 @@ class DatosFragment : Fragment() {
     private fun convertirTerabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
-                textView.setText(datos.terabyteByte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.terabyteByte(editText1.text.toString().toDouble())))
             }
             "Kilobyte"->{
-                textView.setText(datos.terabyteKilobyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.terabyteKilobyte(editText1.text.toString().toDouble())))
             }
             "Megabyte"->{
-                textView.setText(datos.terabyteMegabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.terabyteMegabyte(editText1.text.toString().toDouble())))
             }
             "Gigabyte"->{
-                textView.setText(datos.terabyteGigabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.terabyteGigabyte(editText1.text.toString().toDouble())))
             }
             "Terabyte"->{
                 textView.setText(editText1.text.toString())
@@ -125,19 +127,19 @@ class DatosFragment : Fragment() {
     private fun convertirGigabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
-                textView.setText(datos.gigabyteByte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.gigabyteByte(editText1.text.toString().toDouble())))
             }
             "Kilobyte"->{
-                textView.setText(datos.gigabyteKilobyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.gigabyteKilobyte(editText1.text.toString().toDouble())))
             }
             "Megabyte"->{
-                textView.setText(datos.gigabyteMegabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.gigabyteMegabyte(editText1.text.toString().toDouble())))
             }
             "Gigabyte"->{
                 textView.setText(editText1.text.toString())
             }
             "Terabyte"->{
-                textView.setText(datos.gigabyteTerabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.gigabyteTerabyte(editText1.text.toString().toDouble())))
             }
         }
     }
@@ -145,19 +147,19 @@ class DatosFragment : Fragment() {
     private fun convertirMegabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
-                textView.setText(datos.megabyteByte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.megabyteByte(editText1.text.toString().toDouble())))
             }
             "Kilobyte"->{
-                textView.setText(datos.megabyteKilobyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.megabyteKilobyte(editText1.text.toString().toDouble())))
             }
             "Megabyte"->{
                 textView.setText(editText1.text.toString())
             }
             "Gigabyte"->{
-                textView.setText(datos.megabyteGigabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.megabyteGigabyte(editText1.text.toString().toDouble())))
             }
             "Terabyte"->{
-                textView.setText(datos.megabyteTerabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.megabyteTerabyte(editText1.text.toString().toDouble())))
             }
         }
     }
@@ -165,19 +167,19 @@ class DatosFragment : Fragment() {
     private fun convertirKilobytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
-                textView.setText(datos.kilobyteByte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.kilobyteByte(editText1.text.toString().toDouble())))
             }
             "Kilobyte"->{
                 textView.setText(editText1.text.toString())
             }
             "Megabyte"->{
-                textView.setText(datos.kilobyteMegabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.kilobyteMegabyte(editText1.text.toString().toDouble())))
             }
             "Gigabyte"->{
-                textView.setText(datos.kilobyteGigabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.kilobyteGigabyte(editText1.text.toString().toDouble())))
             }
             "Terabyte"->{
-                textView.setText(datos.kilobyteTerabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.kilobyteTerabyte(editText1.text.toString().toDouble())))
             }
         }
     }
@@ -188,16 +190,16 @@ class DatosFragment : Fragment() {
                 textView.setText(editText1.text.toString())
             }
             "Kilobyte"->{
-                textView.setText(datos.byteKilobyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.byteKilobyte(editText1.text.toString().toDouble())))
             }
             "Megabyte"->{
-                textView.setText(datos.byteMegabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.byteMegabyte(editText1.text.toString().toDouble())))
             }
             "Gigabyte"->{
-                textView.setText(datos.byteGigabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.byteGigabyte(editText1.text.toString().toDouble())))
             }
             "Terabyte"->{
-                textView.setText(datos.byteTerabyte(editText1.text.toString().toDouble()).toString())
+                textView.setText(utils.decimalFormat(datos.byteTerabyte(editText1.text.toString().toDouble())))
             }
         }
     }
