@@ -8,7 +8,7 @@ class Utils() {
 
     fun decimalFormat(decimal:Double): String {
 
-        val df = DecimalFormat("#.##########")
+        val df = DecimalFormat("#.#####")
         df.roundingMode = RoundingMode.UP
 
         return df.format(decimal)

@@ -56,6 +56,8 @@ class TiempoFragment : Fragment() {
         spinner2!!.setAdapter(adapterSpinner)
 
 
+
+
         buttonConvertir.setOnClickListener {
 
             if (editText1.text.isNotEmpty()){
