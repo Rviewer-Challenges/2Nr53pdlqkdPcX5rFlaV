@@ -1,14 +1,18 @@
 package com.cys.fragmets
 
+
+import android.app.DatePickerDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.fragment.app.Fragment
 import com.cys.unit_converter.R
 import com.cys.utils.Tiempo
 import com.cys.utils.Utils
+import java.util.*
+import javax.xml.datatype.DatatypeConstants.MONTHS
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -54,10 +58,6 @@ class TiempoFragment : Fragment() {
         var adapterSpinner: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(requireContext(), R.array.time, android.R.layout.select_dialog_item)
         spinner1!!.setAdapter(adapterSpinner)
         spinner2!!.setAdapter(adapterSpinner)
-
-
-
-
         buttonConvertir.setOnClickListener {
 
             if (editText1.text.isNotEmpty()){
