@@ -45,7 +45,7 @@ class DatosFragment : Fragment() {
                 println("Convertir!")
                 convertir(spinner1, spinner2, textViewResultado, editText1)
             }else{
-                Toast.makeText(context, "Introduzca un valor mayor a 0", Toast.LENGTH_LONG)
+                Toast.makeText(context, "Introduzca un valor mayor a 0", Toast.LENGTH_LONG).show()
                 println("Menor a 0")
                 textViewResultado.setText("0.0")
             }

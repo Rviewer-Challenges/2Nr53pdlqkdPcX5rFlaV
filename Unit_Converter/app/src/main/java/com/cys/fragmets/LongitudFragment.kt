@@ -42,11 +42,9 @@ class LongitudFragment : Fragment() {
 
         buttonConvertir.setOnClickListener {
             if (editText1.text.isNotEmpty()){
-                println("Convertir!")
                 convertir(spinner1, spinner2, textViewResultado, editText1)
             }else{
-                Toast.makeText(context, "Introduzca un valor mayor a 0", Toast.LENGTH_LONG)
-                println("Menor a 0")
+                Toast.makeText(context, "Introduzca un valor mayor a 0", Toast.LENGTH_LONG).show()
                 textViewResultado.setText("0.0")
             }
         }
