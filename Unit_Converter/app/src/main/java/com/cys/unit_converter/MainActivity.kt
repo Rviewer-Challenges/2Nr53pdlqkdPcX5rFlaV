@@ -33,38 +33,29 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_tiempo -> {
                     val fragment = TiempoFragment.newInstance()
                     openFragment(fragment)
-                    Toast.makeText(baseContext, "Tiempo", Toast.LENGTH_LONG).show()
                     true
 
                 }
                 R.id.navigation_longitud -> {
                     val fragment = LongitudFragment.newInstance()
                     openFragment(fragment)
-                    Toast.makeText(baseContext, "Longitud", Toast.LENGTH_LONG).show()
                     true
                 }
                 R.id.navigation_artists -> {
                     val fragment = DatosFragment.newInstance()
                     openFragment(fragment)
-                    Toast.makeText(baseContext, "Datos", Toast.LENGTH_LONG).show()
                     true
                 }
                 R.id.navigation_edad -> {
                     val fragment = EdadFragment.newInstance()
                     openFragment(fragment)
-                    Toast.makeText(baseContext, "Edad", Toast.LENGTH_LONG).show()
-
                     true
                 }
                 else -> false
             }
         }
-
-
-
-
-
     }
+
 
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
@@ -72,8 +63,4 @@ class MainActivity : AppCompatActivity() {
         transaction.addToBackStack(null)
         transaction.commit()
     }
-
-
-
-
 }

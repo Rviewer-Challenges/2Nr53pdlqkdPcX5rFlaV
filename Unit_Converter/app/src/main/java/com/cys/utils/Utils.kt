@@ -30,11 +30,24 @@ class Utils() {
         val start: Long = now.getTimeInMillis()
 
         val milliseconds: Long = TimeUnit.MILLISECONDS.toMillis(Math.abs(end - start))
+        if (validarFecha(birtday, now)){
+            return (milliseconds / 86400000).toInt()
+        }else{
+            return 0
+        }
 
+    }
 
+    fun validarFecha(fechaNacimiento:Calendar, fechaActual:Calendar):Boolean{
+        val birtday: Long = fechaNacimiento.getTimeInMillis()
+        val now: Long = fechaActual.getTimeInMillis()
 
+        if (birtday > now){
+            return false
+        }else{
+            return true
+        }
 
-        return (milliseconds / 86400000).toInt()
     }
 
 

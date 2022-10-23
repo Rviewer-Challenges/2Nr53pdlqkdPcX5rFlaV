@@ -3,68 +3,68 @@ package com.cys.utils
 class Edad() {
 
     //TIERRA
-    fun edadTierraMarte(edadTierra: Int):Int{
+    fun edadTierraMarte(edadTierra: Double): Double {
         println("Edad Tierra Marte")
-        return ((edadTierra * 365) / 687).toInt()
+        return (edadTierra / 687).toDouble()
     }
 
-    fun edadTierraVenus(edadTierra: Int):Int{
+    fun edadTierraVenus(edadTierra: Double):Double{
         println("Edad Tierra Venus")
-        return ((edadTierra * 365) / 225).toInt()
+        return (edadTierra / 225).toDouble()
     }
 
-    fun edadTierraMercurio(edadTierra: Int):Int{
+    fun edadTierraMercurio(edadTierra: Double):Double{
         println("Edad Tierra Mercurio")
-        return ((edadTierra * 365) / 88).toInt()
+        return (edadTierra / 88).toDouble()
     }
 
 
     //MARTE
-    fun edadMarteTierra(edadMarte: Int):Int{
+    fun edadMarteTierra(edadMarte: Double):Double{
         println("Edad Marte Tierra")
-        return ((edadMarte * 687) / 365).toInt()
+        return (edadMarte / 365).toDouble()
     }
 
-    fun edadMarteVenus(edadMarte: Int):Int{
+    fun edadMarteVenus(edadMarte: Double):Double{
         println("Edad Marte Venus")
-        return ((edadMarte * 687) / 225).toInt()
+        return (edadMarte / 225).toDouble()
     }
 
-    fun edadMarteMercurio(edadMarte: Int):Int{
+    fun edadMarteMercurio(edadMarte: Double):Double{
         println("Edad Marte Mercurio")
-        return ((edadMarte * 687) / 88).toInt()
+        return (edadMarte / 88).toDouble()
     }
 
 
     //VENUS
-    fun edadVenusTierra(edadVenus: Int):Int{
+    fun edadVenusTierra(edadVenus: Double):Double{
         println("Edad Venus Tierra")
-        return ((edadVenus * 225) / 365).toInt()
+        return (edadVenus / 365).toDouble()
     }
 
-    fun edadVenusMarte(edadVenus: Int):Int{
+    fun edadVenusMarte(edadVenus: Double):Double{
         println("Edad Venus Marte")
-        return ((edadVenus * 225) / 687).toInt()
+        return (edadVenus / 687).toDouble()
     }
 
-    fun edadVenusMercurio(edadVenus: Int):Int{
+    fun edadVenusMercurio(edadVenus: Double):Double{
         println("Edad Venus Mercurio")
-        return ((edadVenus * 225) / 88).toInt()
+        return (edadVenus / 88).toDouble()
     }
 
     //MERCIRIO
-    fun edadMercurioTierra(edadMercurio: Int):Int{
+    fun edadMercurioTierra(edadMercurio: Double):Double{
         println("Edad Mercurio Tierra")
-        return ((edadMercurio * 88) / 365).toInt()
+        return (edadMercurio / 365).toDouble()
     }
 
-    fun edadMercurioMarte(edadMercurio: Int):Int{
+    fun edadMercurioMarte(edadMercurio: Double):Double{
         println("Edad Mercurio Marte")
-        return ((edadMercurio * 88) / 687).toInt()
+        return (edadMercurio / 687).toDouble()
     }
 
-    fun edadMercurioVenus(edadMercurio: Int):Int{
+    fun edadMercurioVenus(edadMercurio: Double):Double{
         println("Edad Mercurio Venus")
-        return ((edadMercurio * 88) / 225).toInt()
+        return (edadMercurio / 225).toDouble()
     }
 }
