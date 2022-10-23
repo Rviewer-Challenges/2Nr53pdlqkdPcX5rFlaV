@@ -1,5 +1,13 @@
 package com.cys.utils
+/**
+ * Author: Sara Corrales Santos
+ */
 
+
+/**
+ * This class is responsible for providing the necessary functions
+ * for the conversion of times
+ */
 class Tiempo() {
 
 

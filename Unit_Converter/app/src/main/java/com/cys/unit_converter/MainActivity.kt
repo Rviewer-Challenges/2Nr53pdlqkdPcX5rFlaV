@@ -1,11 +1,8 @@
 package com.cys.unit_converter
-
-import android.content.Context
+/**
+ * Author: Sara Corrales Santos
+ */
 import android.os.Bundle
-import android.view.View
-import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cys.fragmets.DatosFragment
@@ -16,18 +13,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-
-
+    /**
+     * This is the main class, it is in charge of showing the fragments that
+     * we select and of creating the menu from which we can choose what time of data
+     * we want to convert.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         openFragment(TiempoFragment.newInstance())
 
-
-
-
-
+        //fragment selection
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_tiempo -> {
@@ -56,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
+    //Shows the selected fragment in the menu
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container_view, fragment)

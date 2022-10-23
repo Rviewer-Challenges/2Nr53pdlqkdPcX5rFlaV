@@ -1,7 +1,13 @@
 package com.cys.utils
+/**
+ * Author:Sara Corrales Santos
+ */
 
-import java.lang.Math.pow
 
+/**
+ * This class is responsible for providing the necessary functions
+ * for the conversion of lengths
+ */
 class Longitud(){
 
     //KILÓMETROS
