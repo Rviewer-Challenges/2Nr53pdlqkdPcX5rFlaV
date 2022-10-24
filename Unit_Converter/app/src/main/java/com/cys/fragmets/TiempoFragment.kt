@@ -14,11 +14,15 @@ import com.cys.unit_converter.R
 import com.cys.utils.Tiempo
 import com.cys.utils.Utils
 
-
+/**
+ * This class is in charge of creating
+ * the fragment to convert different units of time
+ */
 class TiempoFragment : Fragment() {
 
+    //Variables
     private var tiempo = Tiempo()
-    val utils = Utils()
+    private val utils = Utils()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +31,8 @@ class TiempoFragment : Fragment() {
 
     }
 
+    //This function takes care of the functionality of the elements that
+    // make up the user interface
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -68,6 +74,8 @@ class TiempoFragment : Fragment() {
                 }
             }
     }
+
+    //Function that is responsible for converting units of time
     fun convertir(
         spinner1: Spinner,
         spinner2: Spinner,
@@ -77,7 +85,6 @@ class TiempoFragment : Fragment() {
         when(spinner1.selectedItem){
             "Segundos" ->{
                 convertirSegundos(spinner2, textViewResultado, editText1)
-
             }
             "Minutos" ->{
                 convertirMinutos(spinner2, textViewResultado, editText1)
@@ -95,6 +102,7 @@ class TiempoFragment : Fragment() {
         }
     }
 
+    //convert weeks to another unit
     private fun convertirSemanas(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
@@ -115,6 +123,7 @@ class TiempoFragment : Fragment() {
         }
     }
 
+    //convert days to another unit
     private fun convertirDias(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
@@ -135,6 +144,8 @@ class TiempoFragment : Fragment() {
         }
     }
 
+
+    //convert hours to another unit
     private fun convertirHoras(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
@@ -155,6 +166,8 @@ class TiempoFragment : Fragment() {
         }
     }
 
+
+    //convert minutes to another unit
     private fun convertirMinutos(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Segundos"->{
@@ -175,6 +188,8 @@ class TiempoFragment : Fragment() {
         }
     }
 
+
+    //convert seconds to another unit
     private fun convertirSegundos(spinner2: Spinner, textView: TextView, editText1:EditText){
 
         when(spinner2.selectedItem){

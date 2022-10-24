@@ -21,13 +21,13 @@ import java.util.*
  */
 class EdadFragment : Fragment() {
     //variables
-    var edad = Edad()
-    var utils = Utils()
-    val c: Calendar = Calendar.getInstance()
-    var year = c[Calendar.YEAR]
-    val month = c[Calendar.MONTH]
-    val day = c[Calendar.DAY_OF_MONTH]
-    var diasVividos:Double = 0.0
+    private var edad = Edad()
+    private var utils = Utils()
+    private val c: Calendar = Calendar.getInstance()
+    private var year = c[Calendar.YEAR]
+    private val month = c[Calendar.MONTH]
+    private val day = c[Calendar.DAY_OF_MONTH]
+    private var diasVividos:Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -13,9 +13,12 @@ import com.cys.unit_converter.R
 import com.cys.utils.Datos
 import com.cys.utils.Utils
 
-
+/**
+ * Class that is responsible for giving functionality to
+ * the interface of the fragment that converts data sizes
+ */
 class DatosFragment : Fragment() {
-
+    //Variables
     private val datos = Datos()
     private val utils = Utils()
 
@@ -26,6 +29,8 @@ class DatosFragment : Fragment() {
         }
     }
 
+    //Function that is responsible for giving functionality to
+    // the elements of the interface
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,7 +41,6 @@ class DatosFragment : Fragment() {
         var editText1 = view.findViewById<EditText>(R.id.editTextNumb1)
         var textViewResultado = view.findViewById<TextView>(R.id.textViewResultado)
         var buttonConvertir = view.findViewById<Button>(R.id.buttonConvertir)
-
 
 
         var adapterSpinner: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(requireContext(), R.array.datos, android.R.layout.select_dialog_item)
@@ -66,6 +70,8 @@ class DatosFragment : Fragment() {
                 }
             }
     }
+
+    //Function that converts data sizes
     fun convertir(
         spinner1: Spinner,
         spinner2: Spinner,
@@ -92,6 +98,7 @@ class DatosFragment : Fragment() {
         }
     }
 
+    //Function that converts Terabyte to another unit
     private fun convertirTerabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
@@ -112,6 +119,7 @@ class DatosFragment : Fragment() {
         }
     }
 
+    //Function that converts Gigabyte to another unit
     private fun convertirGigabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
@@ -132,6 +140,7 @@ class DatosFragment : Fragment() {
         }
     }
 
+    //Function that converts Merabyte to another unit
     private fun convertirMegabytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
@@ -152,6 +161,7 @@ class DatosFragment : Fragment() {
         }
     }
 
+    //Function that converts Kilobyte to another unit
     private fun convertirKilobytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{
@@ -172,6 +182,8 @@ class DatosFragment : Fragment() {
         }
     }
 
+
+    //Function that converts Byte to another unit
     private fun convertirBytes(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Byte"->{

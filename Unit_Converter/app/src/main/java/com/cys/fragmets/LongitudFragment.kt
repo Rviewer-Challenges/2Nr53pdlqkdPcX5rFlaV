@@ -12,11 +12,17 @@ import com.cys.unit_converter.R
 import com.cys.utils.Longitud
 import com.cys.utils.Utils
 
-
+/**
+ * This class is responsible for giving functionality to
+ * the interface elements of the length fragment
+ */
 class LongitudFragment : Fragment() {
 
+    //Variables
     private val longitud:Longitud = Longitud()
     private val utils = Utils()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -24,11 +30,13 @@ class LongitudFragment : Fragment() {
         }
     }
 
+    //This function is responsible for giving functionality to
+    // the elements of the user interface
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         val view:View = inflater.inflate(R.layout.fragment_longitud, container, false)
         var spinner1 = view.findViewById<Spinner>(R.id.spinner1)
         var spinner2 = view.findViewById<Spinner>(R.id.spinner2)
@@ -66,6 +74,7 @@ class LongitudFragment : Fragment() {
             }
     }
 
+    //takes care of converting lengths
     fun convertir(
         spinner1: Spinner,
         spinner2: Spinner,
@@ -92,6 +101,8 @@ class LongitudFragment : Fragment() {
         }
     }
 
+
+    //convert kilometers to other units
     private fun convertirKilometros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
@@ -112,6 +123,7 @@ class LongitudFragment : Fragment() {
         }
     }
 
+    //convert meters to other units
     private fun convertirMetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
@@ -132,6 +144,7 @@ class LongitudFragment : Fragment() {
         }
     }
 
+    //convert centimeters to other units
     private fun convertirCentimetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
@@ -152,6 +165,7 @@ class LongitudFragment : Fragment() {
         }
     }
 
+    //convert decimeters to other units
     private fun convertirDecimetros(spinner2: Spinner, textView: TextView, editText1: EditText) {
         when(spinner2.selectedItem){
             "Milimetros"->{
@@ -172,6 +186,7 @@ class LongitudFragment : Fragment() {
         }
     }
 
+    //convert millimeters to other units
     private fun convertirMilimetros(spinner2: Spinner, textView: TextView, editText1:EditText){
 
         when(spinner2.selectedItem){
